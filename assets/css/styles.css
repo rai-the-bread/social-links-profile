@@ -16,6 +16,10 @@ http://meyerweb.com/eric/tools/css/reset/
   margin: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -33,7 +37,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
-    font-size: 62.5%;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -94,9 +97,7 @@ table {
 }
 
 body {
-    /* 4. Add accessible line-height */
     line-height: 1.5;
-    /* 5. Improve text rendering */
     -webkit-font-smoothing: antialiased;
     background: var(--grey-900);
     min-height: 100vh;
@@ -106,9 +107,18 @@ body {
         color: var(--white);
     }
 
-    a:focus-visible, a:focus {
+    /* Keyboard focus */
+    a:focus-visible, 
+   .button:focus-visible,
+    a:focus,
+    .button:focus {
         outline: 3px solid var(--green);
         outline-offset: 3px;
+    }
+
+    /* Keep mouse interactions visually clean: only hide focus on mouse-driven activation */
+    :focus:not(:focus-visible) {
+    outline: none; /* allows clicking with mouse without persistent outline */
     }
 
 .text-1 {
@@ -147,7 +157,6 @@ body {
     background: var(--grey-800);
     padding: var(--spacing-500);
     border-radius: var(--spacing-150);
-    gap: var(--spacing-300);
 }
 
 /* Header styles */
