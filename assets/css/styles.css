@@ -94,6 +94,7 @@ table {
     --text-preset-1: 700 2.4rem "Inter", sans-serif;
     --text-preset-2: 400 1.4rem "Inter", sans-serif;
     --text-preset-3: 600 1.4rem "Inter", sans-serif;
+    --text-preset-4: 400 1.2rem "Inter", sans-serif;
 }
 
 body {
@@ -118,6 +119,10 @@ body {
         .text-3 {
             font: var(--text-preset-3);
         }
+
+            .text-4 {
+                font: var(--text-preset-4);
+            }
 
 /* Flexbox */
 .flex {
