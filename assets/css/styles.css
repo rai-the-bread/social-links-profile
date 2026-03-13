@@ -107,20 +107,6 @@ body {
         color: var(--white);
     }
 
-    /* Keyboard focus */
-    a:focus-visible, 
-   .button:focus-visible,
-    a:focus,
-    .button:focus {
-        outline: 3px solid var(--green);
-        outline-offset: 3px;
-    }
-
-    /* Keep mouse interactions visually clean: only hide focus on mouse-driven activation */
-    :focus:not(:focus-visible) {
-    outline: none; /* allows clicking with mouse without persistent outline */
-    }
-
 .text-1 {
     font: var(--text-preset-1);
 }
@@ -177,6 +163,7 @@ body {
     }
 
 /* Main styles */
+/* Keyboard focus */
 a.button {
     text-decoration: none;
 }
@@ -194,6 +181,19 @@ a.button {
             cursor: pointer;
             color: var(--black);
         }
+
+            a:focus-visible, 
+            .button:focus-visible,
+            a:focus,
+            .button:focus {
+                outline: 3px solid var(--green);
+                outline-offset: 3px;
+            }
+
+                /* Keep mouse interactions visually clean: only hide focus on mouse-driven activation */
+                :focus:not(:focus-visible) {
+                outline: none; /* allows clicking with mouse without persistent outline */
+                }
 
 /* Attribution Styles */
 .attribution {
