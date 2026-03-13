@@ -192,7 +192,8 @@ a.button {
             a:focus,
             .button:focus {
                 outline: 3px solid var(--green);
-                outline-offset: 3px;
+                outline-offset: 2px;
+                border-radius: var(--spacing-100);
             }
 
                 /* Keep mouse interactions visually clean: only hide focus on mouse-driven activation */
