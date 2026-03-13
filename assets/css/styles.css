@@ -33,6 +33,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
+    font-size: 62.5%;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -71,9 +72,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-a {
-    text-decoration: none;
-}
 
 /* Global Styles */
 /* Variables */
@@ -84,15 +82,15 @@ a {
     --black: #000;
     --white: #fff;
     --green: #C4F82A;
-    --spacing-50: 4px;
-    --spacing-100: 8px;
-    --spacing-150: 12px;
-    --spacing-200: 16px;
-    --spacing-300: 24px;
-    --spacing-500: 40px;
-    --text-preset-1: 700 24px "Inter", sans-serif;
-    --text-preset-2: 400 14px "Inter", sans-serif;
-    --text-preset-3: 600 14px "Inter", sans-serif;
+    --spacing-50: 0.4rem;
+    --spacing-100: 0.8rem;
+    --spacing-150: 1.2rem;
+    --spacing-200: 1.6rem;
+    --spacing-300: 2.4rem;
+    --spacing-500: 4rem;
+    --text-preset-1: 700 2.4rem "Inter", sans-serif;
+    --text-preset-2: 400 1.4rem "Inter", sans-serif;
+    --text-preset-3: 600 1.4rem "Inter", sans-serif;
 }
 
 body {
@@ -106,6 +104,11 @@ body {
 
     body, a {
         color: var(--white);
+    }
+
+    a:focus-visible, a:focus {
+        outline: 3px solid var(--green);
+        outline-offset: 3px;
     }
 
 .text-1 {
@@ -144,11 +147,12 @@ body {
     background: var(--grey-800);
     padding: var(--spacing-500);
     border-radius: var(--spacing-150);
+    gap: var(--spacing-300);
 }
 
 /* Header styles */
 .headshot {
-    width: 100px;
+    width: clamp(56px, 15vw, 100px);
     border-radius: 50%;
 }
 
@@ -163,7 +167,6 @@ body {
 /* Main styles */
 .links {
     gap: var(--spacing-200);
-    margin-top: var(--spacing-300);
 }
 
 .button {
@@ -174,19 +177,19 @@ body {
     text-align: center;
 }
 
+    a.button {
+        text-decoration: none;
+    }
+
     .button:hover {
         background: var(--green);
         cursor: pointer;
         color: var(--black);
     }
 
-        .button:focus {
-            outline: 2px solid var(--green);
-        }
-
 /* Attribution Styles */
 .attribution {
-      font-size: 11px;
+      font-size: 1.1rem;
       text-align: center;
     }
 
@@ -195,5 +198,5 @@ body {
     }
 
         .attribution a:hover {
-            text-decoration: underline;
+            color: var(--white);
         }
