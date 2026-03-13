@@ -50,6 +50,8 @@ Finally, I deployed to GitHub pages, fixed any bugs that came up, and wrote this
 Seeing the Figma design files taught me a lot about good ways to outline projects and make design files in my own projects.
 It was super cool seeing the markdown files for AI agents as well. I will likely use this as a reference in my own projects.
 
+I learned a lot about accessibility from the feedback. Some of it was contradicting though. I had a score of 8.5 in everything, made the changes, and then the score went down to 8.1.
+
 ### Continued development
 In future projects, I'm going to model my designs and prototypes in Figma off of how it is done here. I'm also going to continue using CSS variables.
 

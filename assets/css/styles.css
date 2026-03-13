@@ -152,6 +152,13 @@ body {
         justify-content: space-evenly;
     }
 
+.gap-200 {
+    gap: var(--spacing-200);
+}
+    .gap-50 {
+        gap: var(--spacing-50);
+    }
+
 /* Container */
 .container {
     background: var(--grey-800);
@@ -161,12 +168,8 @@ body {
 
 /* Header styles */
 .headshot {
-    width: clamp(56px, 15vw, 100px);
+    width: clamp(5.6rem, 15vw, 10rem);
     border-radius: 50%;
-}
-
-.info {
-    gap: var(--spacing-50);
 }
 
     .green-text {
@@ -174,27 +177,23 @@ body {
     }
 
 /* Main styles */
-.links {
-    gap: var(--spacing-200);
+a.button {
+    text-decoration: none;
 }
 
-.button {
-    border-radius: var(--spacing-100);
-    padding: var(--spacing-150);
-    background: var(--grey-700);
-    display: block;
-    text-align: center;
-}
-
-    a.button {
-        text-decoration: none;
+    .button {
+        border-radius: var(--spacing-100);
+        padding: var(--spacing-150);
+        background: var(--grey-700);
+        display: block;
+        text-align: center;
     }
 
-    .button:hover {
-        background: var(--green);
-        cursor: pointer;
-        color: var(--black);
-    }
+        .button:hover {
+            background: var(--green);
+            cursor: pointer;
+            color: var(--black);
+        }
 
 /* Attribution Styles */
 .attribution {
