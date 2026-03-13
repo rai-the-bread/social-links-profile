@@ -1,4 +1,9 @@
-/* CSS Reset */
+/* 
+Josh comeau css reset combined with  
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -9,11 +14,36 @@
   margin: 0;
 }
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  /* 4. Add accessible line-height */
-  line-height: 1.5;
-  /* 5. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
 }
 
 /* 6. Improve media defaults */
@@ -31,28 +61,66 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
-
 /* 9. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
-
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
-
-/* 10. Create a root stacking context */
+/*
+  10. Create a root stacking context
+*/
 #root, #__next {
   isolation: isolate;
 }
 
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+
 /* Global Styles */
+/* Variables */
+:root {
+    --grey-900: #141414;
+    --grey-800: #1F1F1F;
+    --grey-700: #333333;
+    --black: #000;
+    --white: #fff;
+    --indigo: hsl(228, 45%, 44%);
+    --green: #C4F82A;
+    --spacing-50: 4px;
+    --spacing-100: 8px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-500: 40px;
+}
+
 body {
-    background: #141414;
+    background: var(--grey-900);
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid white;
 }
 
     body, a {
-        color: #fff;
+        color: var(--white);
     }
 
 /* Flexbox */
@@ -60,10 +128,57 @@ body {
     display: flex;
 }
 
+    .flex-col {
+        flex-direction: column;
+        gap: var(--spacing-300);
+    }
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+    .justify-evenly {
+        justify-content: space-evenly;
+    }
+
 /* Container */
 .container {
-    background: #1F1F1F;
+    background: var(--grey-800);
+    padding: var(--spacing-500);
+    border-radius: var(--spacing-150);
 }
+
+/* Header styles */
+.headshot {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.green-text {
+    color: var(--green);
+}
+
+/* Main styles */
+.links {
+    gap: var(--spacing-200);
+    margin-top: var(--spacing-300);
+}
+
+.button {
+    border-radius: var(--spacing-100);
+    padding: var(--spacing-150);
+    background: var(--grey-700);
+    display: block;
+    text-align: center;
+}
+
+    .button:hover {
+        background: var(--green);
+        cursor: pointer;
+        color: var(--black);
+    }
 
 /* Attribution Styles */
 .attribution {
@@ -72,5 +187,5 @@ body {
     }
 
     .attribution a {
-      color: hsl(228, 45%, 44%);
+      color: var(--indigo);
     }
